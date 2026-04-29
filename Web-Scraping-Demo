@@ -1,0 +1,87 @@
+# 🕷️ Web Scraping Demo
+
+A beginner-friendly Python project that demonstrates how to scrape business listing data (names and locations) from a website using **BeautifulSoup** and **Requests**, then organize the results into a structured **Pandas DataFrame**.
+
+---
+
+## 📌 Project Overview
+
+This notebook scrapes similar business listings from a [Yellow Pages India](yellowpages.in/) business page and extracts:
+* **Business Names**
+* **Business Locations**
+
+The extracted data is then loaded into a Pandas DataFrame for easy viewing and further analysis.
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| `requests` | Sending HTTP GET requests to fetch webpage HTML |
+| `BeautifulSoup` (bs4) | Parsing and navigating the HTML structure |
+| `pandas` | Organizing scraped data into a DataFrame |
+| `lxml` | HTML parser backend for BeautifulSoup |
+
+---
+
+## 📁 Project Structure
+
+    web-scraping-demo/
+    │
+    ├── Web_scraping_demo.ipynb   # Main Jupyter Notebook
+    └── README.md                 # Project documentation
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have Python 3.x installed. Then install the required libraries:
+
+    pip install requests beautifulsoup4 pandas lxml
+
+### Run the Notebook
+
+    jupyter notebook Web_scraping_demo.ipynb
+
+---
+
+## 🔍 How It Works
+
+1. **Set HTTP Headers** — Mimics a real browser request to avoid being blocked by the server.
+2. **Fetch the Webpage** — Sends a GET request to the target URL and retrieves the raw HTML.
+3. **Parse HTML** — BeautifulSoup parses the HTML using the `lxml` parser.
+4. **Extract Data** — Loops through elements with class `eachSimilarBusiness` to pull business names and locations.
+5. **Build DataFrame** — Stores the scraped data in a Pandas DataFrame for structured output.
+
+---
+
+## 📊 Sample Output
+
+| name | location |
+|------|----------|
+| Business A | Hyderabad |
+| Business B | Secunderabad |
+| ... | ... |
+
+---
+
+## ⚠️ Disclaimer
+
+This project is for **educational purposes only**. Always review a website's `robots.txt` and Terms of Service before scraping. Be respectful of rate limits and do not overload servers with requests.
+
+---
+
+## 📅 Created
+
+April 29, 2026
+
+---
+
+## 🙌 Acknowledgements
+
+* [BeautifulSoup Docs](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+* [Requests Docs](https://docs.python-requests.org/)
+* [Pandas Docs](https://pandas.pydata.org/docs/)
